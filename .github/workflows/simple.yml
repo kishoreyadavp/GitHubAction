@@ -6,7 +6,7 @@ jobs:
   run-shell-command:
     runs-on: Ubuntu-latest
     steps:
-      - name: echo a String
+      - name: eccho a String
         run: echo "Hello World"
       - name: multiline script
         run: |
