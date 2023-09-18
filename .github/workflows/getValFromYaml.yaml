@@ -7,7 +7,6 @@ jobs:
   Checking-Yq:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
         - name: Get DB Host val from config file
           uses: mikefarah/yq@master
           with:
