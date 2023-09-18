@@ -11,4 +11,6 @@ jobs:
         - name: Get DB Host val from config file
           uses: mikefarah/yq@master
           with:
-            cmd: yq '.DB_HOST' '.github/yaml/platform.yaml'
+            cmd: pwd
+                 dbHost=yq '.DB_HOST' '.github/yaml/platform.yaml'
+                 echo $dbHost
