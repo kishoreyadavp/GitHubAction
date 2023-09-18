@@ -14,11 +14,7 @@ jobs:
           uses: mikefarah/yq@master
           with:
             cmd: | 
-                host=echo $(yq '.DB_HOST' '.github/yaml/platform.yaml')
-                port=echo $(yq '.DB_PORT' '.github/yaml/platform.yaml')
-                echo "host=$host" >> $GITHUB_ENV
-                echo "port=$port" >> $GITHUB_ENV
-        - name: Get DB Value from yaml file
-          run: |
-            echo $host
-            echo $port
+                host=$(yq '.DB_HOST' '.github/yaml/platform.yaml')
+                port=$(yq '.DB_PORT' '.github/yaml/platform.yaml')
+                echo $host
+                echo $port
