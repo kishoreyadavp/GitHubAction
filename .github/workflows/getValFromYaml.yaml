@@ -9,14 +9,12 @@ jobs:
     steps:
         - name: Repo checkout
           uses: actions/checkout@v3
-        - name: Get Path
-          run: |
-            echo pwd
         - name: Get DB Host val from config file
           id: get_val
           uses: mikefarah/yq@master
           with:
             cmd: yq '.DB_HOST' '.github/yaml/platform.yaml'
+                 yq '.DB_PORT' '.github/yaml/platform.yaml' 
         - name: Get DB Value from yaml file
           run: |
             echo ${{steps.get_val.outputs.result}}
