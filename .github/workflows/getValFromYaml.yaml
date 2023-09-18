@@ -7,6 +7,9 @@ jobs:
   Checking-Yq:
     runs-on: ubuntu-latest
     steps:
+        - name: Get Path
+          run: |
+            echo pwd
         - name: Get DB Host val from config file
           id: get_val
           uses: mikefarah/yq@master
