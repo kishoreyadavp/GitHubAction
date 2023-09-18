@@ -7,6 +7,8 @@ jobs:
   Checking-Yq:
     runs-on: ubuntu-latest
     steps:
+        - name: Repo checkout
+          uses: actions/checkout@v1
         - name: Get Path
           run: |
             echo pwd
