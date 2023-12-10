@@ -1,7 +1,7 @@
 name: Check yq 
 
 on: 
-  push:
+  pull_request:
 
 jobs:
   Checking-Yq:
