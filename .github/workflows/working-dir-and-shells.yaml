@@ -16,7 +16,7 @@ jobs:
   display-wd-info-windows:
     runs-on: windows-latest
     steps:
-        - name: Display working directory and list files
+      - name: Display working directory and list files
         run: |
             pwd
             ls -a
