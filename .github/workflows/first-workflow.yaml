@@ -23,5 +23,3 @@ jobs:
     steps:
       - name: echo commads
         run: Write-Output "Windows String"
-      - name: error String
-        run: doesnotexists
