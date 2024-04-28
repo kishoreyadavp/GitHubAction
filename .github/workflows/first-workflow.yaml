@@ -4,7 +4,7 @@ on: [push]
 
 jobs: 
   run-shell-commands:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Single line command
         run: echo "Hello World"
