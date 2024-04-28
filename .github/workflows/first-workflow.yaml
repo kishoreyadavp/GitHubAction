@@ -1,0 +1,14 @@
+name: First Workflow
+
+on: [push]
+
+jobs: 
+  run-shell-commands:
+    runs-on: unbuntu-latest
+    steps: 
+      - name: Single line command
+        run: echo "Hello World"
+      - name: Multi line command
+        run: |
+          node -v
+          npm -v
